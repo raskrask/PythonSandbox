@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  gen_image:
+    build: ./
+    volumes:
+      - ./:/app
+    environment:
+      - PYTHONPATH=/app
+    shm_size: 8gb
+    oom_score_adj: -1000
+    ulimits:
+      memlock: -1
+      stack: 67108864
+    deploy:
+      resources:
+        limits:
+          memory: 12G
+    mem_limit: 12G
+    memswap_limit: 12G

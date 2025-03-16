@@ -1,5 +1,6 @@
 # 仮想環境
 venv*/
+myenv*/
 .env*
 .venv/
 pip-log.txt
